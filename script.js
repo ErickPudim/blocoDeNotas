@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const blocoDeNotas = document.getElementById('blocoDeNotas');
     const btnLimpaNotas = document.getElementById('btnLimparNotas');
     const btnSalvarNotas = document.getElementById('btnSalvarNotas');
-
+    const btnModoEscruro = document.getElementById('btnModoEscuro');
 
 
     btnLimpaNotas.addEventListener('click', () =>{
@@ -59,6 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Nota salva no localStorage!"); // Uma mensagem no console para fins de depuração.
     });
 
-
+    btnModoEscuro.addEventListener('click', () => {
+        const body = document.getElementById('body');
+        if (body.className == "Dark"){
+            body.className = "White"
+        }else{
+            body.className = "Dark"
+        }
+    });
 
 });
